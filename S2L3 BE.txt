@@ -1,0 +1,57 @@
+1 
+Select COUNT(*) from Orders
+
+2 
+Select COUNT(*) from Employees
+
+3 
+Select COUNT(*) from Employees
+where City='London'
+
+4 
+Select AVG(Freight) 
+From Orders
+
+5 
+Select AVG(Freight) 
+From Orders
+Where CustomerID='BOTTM'
+
+6
+Select CustomerID, AVG(Freight)
+FROM Orders
+Group by CustomerID
+
+7
+Select COUNT(*) , City
+From Employees 
+Group by City
+
+8
+Select OrderId, SUM((UnitPrice*Quantity)) As TotaleRiga
+From [Order Details]
+Group by OrderID
+
+9
+Select OrderId, SUM((UnitPrice*Quantity)) As TotaleRiga
+From [Order Details]
+Group by OrderID
+Having OrderID=10248
+
+10
+Select Count(*), CategoryID
+From Products
+Group by CategoryID
+
+11
+Select Count(*), ShipCountry
+From Orders
+Group by ShipCountry
+
+12
+Select AVG(Freight), ShipCountry
+From Orders
+Group by ShipCountry
+
+
+
